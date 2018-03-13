@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Bootstrap CSS Link for bootstrap grid and components -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
     <!-- CSS Stylesheet Link for custom styles -->
     <link rel="stylesheet" href="./assets/css/styles.css">
     <!-- Reset.css link to keep consistent between browsers -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <title>Rock Paper Scissors!</title>
 </head>
+
 <body>
 
-<div id="pageWrapper">
-    <h1>Rock Paper Scissors</h1>
-    
-    <div class="choices">
-        <h2>Rock</h2>
-        <h2>Paper</h2>
-        <h2>Scissors</h2>
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB7K3ly6fuvQnhV-2xxTEyYfpWtmOFDE_0",
+            authDomain: "rps-69662.firebaseapp.com",
+            databaseURL: "https://rps-69662.firebaseio.com",
+            projectId: "rps-69662",
+            storageBucket: "rps-69662.appspot.com",
+            messagingSenderId: "569260151946"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <div id="pageWrapper">
+        <h1>Rock Paper Scissors</h1>
+
+        <div class="playerOne">
+            <h2 class="choices">Rock</h2>
+            <h2 class="choices">Paper</h2>
+            <h2 class="choices">Scissors</h2>
+        </div>
+        <div class="playerTwo">
+            <h2 class="choices">Rock</h2>
+            <h2 class="choices">Paper</h2>
+            <h2 class="choices">Scissors</h2>
+        </div>
+
     </div>
-    <div class="choices">
-        <h2>Rock</h2>
-        <h2>Paper</h2>
-        <h2>Scissors</h2>
-    </div>
-    
-</div>
-    
+
     <!-- Linking JQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <!-- Linking in JS -->
     <script src="./assets/javascript/app.js"></script>
     <!-- Bootstrap JS link -->
@@ -41,4 +59,5 @@
     <!-- Bootstrap Popper.js link -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
 </body>
+
 </html>

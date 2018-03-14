@@ -19,38 +19,37 @@
 
     <div id="pageWrapper">
         <h1>Rock Paper Scissors</h1>
+        <h2 id="notification"></h2>
         <!-- These are the options for the users to select their weapons -->
-        <div class="playerOne game">
-            <h2 class="choices">Rock</h2>
-            <h2 class="choices">Paper</h2>
-            <h2 class="choices">Scissors</h2>
-        </div>
-        <div class="playerTwo game">
-            <h2 class="choices">Rock</h2>
-            <h2 class="choices">Paper</h2>
-            <h2 class="choices">Scissors</h2>
+        <div class="gameBoard">
+            <div id="playerOneBoard"></div>
+            <div id="playerOneWinloss"></div>
+            <div id="playerTwoBoard"></div>
+            <div id="playerTwoWinloss"></div>
         </div>
         <!-- Name of player one that will be pushed to the database -->
-        <form class="userName" id="userOneForm">
-            Player 1:
-            <input id="userOneName" type="text" name="userOneName" value="" placeholder="Type name here...">
-            <input type="submit" value="Submit">
-        </form>
-        <!-- Name of player two that will be pushed to the database -->
-        <form class="userName" id="userTwoForm">
-            Player 2:
-            <input id="userTwoName" type="text" name="userTwoName" value="" placeholder="Type name here...">
-            <input type="submit" value="Submit">
-        </form>
-        <!-- Live chat box -->
-        <form>
-            <div>
-                <!-- Holds the chat messages after they have been submitted -->
-            </div>
-            Message:
-            <input type="text" name="chatMessage" value="" placeholder="Type message here...">
-            <input type="submit" value="Submit">
-        </form>
+        <div class="bottom">
+            <form class="userName" id="userOneForm">
+                Player 1:
+                <input id="userOneName" type="text" name="userOneName" value="" placeholder="Type name here...">
+                <input type="submit" value="Submit">
+            </form>
+            <!-- Name of player two that will be pushed to the database -->
+            <form class="userName" id="userTwoForm">
+                Player 2:
+                <input id="userTwoName" type="text" name="userTwoName" value="" placeholder="Type name here...">
+                <input type="submit" value="Submit">
+            </form>
+            <!-- Live chat box -->
+            <form id='chatbox'>
+                <div id='messages'>
+                    <!-- Holds the chat messages after they have been submitted -->
+                </div>
+                Message:
+                <input type="text" name="chatMessage" value="" placeholder="Type message here...">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
 
     </div>
 

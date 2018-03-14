@@ -18,29 +18,6 @@ var stateRef = data.ref('current/state');
 var messagesRef = data.ref('messages');
 var userOne, userOneChoice, userOneWins, userOneLosses, userTwo, userTwoChoice, userTwoWins, userTwoLosses, currentUser, state;
 
-//Data structure
-/*
-messages:
-current:
-    state:
-    playerOne:
-        name:
-        choice:
-    playerTwo:
-        name:
-        choice:
-users:
-    $USER:
-        wins:
-        losses:
-available states:
-waitingPlayers: 1 or fewer players logged in
-waitingChoiceBoth: Neither player selected a choice
-waitingChoiceOne: playerOne has not selected a choice
-waitingChoiceTwo: playerTwo has not selected a choice
-showingResults: both players have selected a choice, showing results.
-*/
-
 // This function will detect the click and report the choice
 $(document).ready(function () {
 
@@ -265,13 +242,3 @@ $(document).ready(function () {
         stateRef.set('waitingChoiceBoth');
     }
 });
-
-
-
-// Two user objects user one and two
-
-// once one player is connected make that input un editable for both players
-
-// Inside of each user you will need , "name" "wins" "losses" "choice"
-
-// Connected flag/Waiting for another player

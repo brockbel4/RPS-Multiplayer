@@ -17,47 +17,59 @@
 
 <body>
 
-    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyB7K3ly6fuvQnhV-2xxTEyYfpWtmOFDE_0",
-            authDomain: "rps-69662.firebaseapp.com",
-            databaseURL: "https://rps-69662.firebaseio.com",
-            projectId: "rps-69662",
-            storageBucket: "rps-69662.appspot.com",
-            messagingSenderId: "569260151946"
-        };
-        firebase.initializeApp(config);
-    </script>
-
     <div id="pageWrapper">
         <h1>Rock Paper Scissors</h1>
-
-        <div class="playerOne">
+        <!-- These are the options for the users to select their weapons -->
+        <div class="playerOne game">
             <h2 class="choices">Rock</h2>
             <h2 class="choices">Paper</h2>
             <h2 class="choices">Scissors</h2>
         </div>
-        <div class="playerTwo">
+        <div class="playerTwo game">
             <h2 class="choices">Rock</h2>
             <h2 class="choices">Paper</h2>
             <h2 class="choices">Scissors</h2>
         </div>
+        <!-- Name of player one that will be pushed to the database -->
+        <form class="userName" id="userOneForm">
+            Player 1:
+            <input id="userOneName" type="text" name="userOneName" value="" placeholder="Type name here...">
+            <input type="submit" value="Submit">
+        </form>
+        <!-- Name of player two that will be pushed to the database -->
+        <form class="userName" id="userTwoForm">
+            Player 2:
+            <input id="userTwoName" type="text" name="userTwoName" value="" placeholder="Type name here...">
+            <input type="submit" value="Submit">
+        </form>
+        <!-- Live chat box -->
+        <form>
+            <div>
+                <!-- Holds the chat messages after they have been submitted -->
+            </div>
+            Message:
+            <input type="text" name="chatMessage" value="" placeholder="Type message here...">
+            <input type="submit" value="Submit">
+        </form>
 
     </div>
 
+    <!-- Linking firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
     <!-- Linking JQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <!-- Linking in JS -->
     <script src="./assets/javascript/app.js"></script>
     <!-- Bootstrap JS link -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <!-- Bootstrap JQuery link -->
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
     <!-- Bootstrap Popper.js link -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
